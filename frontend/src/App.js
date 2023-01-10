@@ -9,7 +9,7 @@ import Register from './pages/Register'
 import NewTicket from './pages/NewTicket'
 import Tickets from './pages/Tickets'
 import Ticket from './pages/Ticket'
-
+import Admin from './admin/Admin'
 // NOTE: Here we have removed the nested routing as the path is the same
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/admin' element={<Admin/>}/>
             <Route
               path='/new-ticket'
               element={

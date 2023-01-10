@@ -13,35 +13,49 @@ function Header() {
     navigate('/')
   }
 
-  return (
-    <header className='header'>
-      <div className='logo'>
-        <Link to='/'>Support Desk</Link>
+  return (<>
+    
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <div>
+        <Link to='/'>Home</Link>|
       </div>
-      <ul>
-        {user ? (
-          <li>
+        </ul>
+    </div>
+    
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            {user ? (
+          <li align="right">
             <button className='btn' onClick={onLogout}>
               <FaSignOutAlt /> Logout
             </button>
           </li>
         ) : (
           <>
-            <li>
+            <li align="right">
               <Link to='/login'>
-                <FaSignInAlt /> Login
+                <FaSignInAlt /> Login 
               </Link>
             </li>
-            <li>
+            <li align="right">
               <Link to='/register'>
                 <FaUser /> Register
               </Link>
             </li>
+            <li align="right">
+              <Link to='/admin'>
+                <FaUser /> Admin
+              </Link>
+            </li>
           </>
         )}
-      </ul>
-    </header>
-  )
+        </ul>
+    </div>
+</nav>
+    
+  
+</>);
 }
-
 export default Header
